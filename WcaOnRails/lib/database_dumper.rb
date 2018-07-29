@@ -66,6 +66,8 @@ module DatabaseDumper
           base_entry_fee_lowest_denomination
           currency_code
           registration_requirements
+          created_at
+          updated_at
         ),
         db_default: %w(
           connected_stripe_account_id
@@ -262,11 +264,12 @@ module DatabaseDumper
           id
           competition_event_id
           format_id
+          total_number_of_rounds
           number
           time_limit
           cutoff
           advancement_condition
-          scramble_group_count
+          scramble_set_count
           round_results
           created_at
           updated_at

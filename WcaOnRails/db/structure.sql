@@ -42,7 +42,7 @@ CREATE TABLE `Competitions` (
   `results_nag_sent_at` datetime DEFAULT NULL,
   `generate_website` tinyint(1) DEFAULT NULL,
   `announced_at` datetime DEFAULT NULL,
-  `base_entry_fee_lowest_denomination` int(11) NOT NULL DEFAULT '0',
+  `base_entry_fee_lowest_denomination` int(11) DEFAULT NULL,
   `currency_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT 'USD',
   `endYear` smallint(6) NOT NULL DEFAULT '0',
   `connected_stripe_account_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -53,6 +53,8 @@ CREATE TABLE `Competitions` (
   `competitor_limit` int(11) DEFAULT NULL,
   `competitor_limit_reason` text COLLATE utf8mb4_unicode_ci,
   `registration_requirements` text COLLATE utf8mb4_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `year_month_day` (`year`,`month`,`day`),
   KEY `index_Competitions_on_countryId` (`countryId`),
@@ -1018,8 +1020,9 @@ CREATE TABLE `rounds` (
   `time_limit` text COLLATE utf8mb4_unicode_ci,
   `cutoff` text COLLATE utf8mb4_unicode_ci,
   `advancement_condition` text COLLATE utf8mb4_unicode_ci,
-  `scramble_group_count` int(11) NOT NULL DEFAULT '1',
+  `scramble_set_count` int(11) NOT NULL DEFAULT '1',
   `round_results` mediumtext COLLATE utf8mb4_unicode_ci,
+  `total_number_of_rounds` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `index_rounds_on_competition_event_id_and_number` (`competition_event_id`,`number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1388,4 +1391,8 @@ INSERT INTO `schema_migrations` (version) VALUES
 ('20180528130810'),
 ('20180621093155'),
 ('20180629112054'),
-('20180703172949');
+('20180701160042'),
+('20180703172949'),
+('20180705231137'),
+('20180709220826'),
+('20180710165401');

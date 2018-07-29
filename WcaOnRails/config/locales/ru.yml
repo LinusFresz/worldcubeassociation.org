@@ -712,6 +712,8 @@ ru:
         #original_hash: da39a3e
         inquiry: ''
         #original_hash: da39a3e
+        competition_id: ''
+        #original_hash: da39a3e
         message: ''
         #original_hash: da39a3e
         name: ''
@@ -827,6 +829,8 @@ ru:
       team:
         #original_hash: da39a3e
         friendly_id: ''
+        #original_hash: da39a3e
+        hidden: ''
       vote:
         #original_hash: da39a3e
         comment: ''
@@ -874,6 +878,8 @@ ru:
       contact_form:
         #original_hash: d31ab65
         inquiry: К какой категории относится ваш запрос?
+        #original_hash: 1917f4f
+        competition_id: Соревнование
         #original_hash: 709a232
         name: Имя
         #original_hash: 3fa6f5f
@@ -924,6 +930,10 @@ ru:
         письмо с подтверждением, откройте
         https://www.worldcubeassociation.org/users/confirmation/new, чтобы мы
         отправили другое письмо.
+    mailer:
+      confirmation_instructions:
+        #original_hash: 0ea8196
+        subject: 'Пожалуйста, подтвердите ваш email-адрес'
   wca:
     errors:
       messages:
@@ -1070,6 +1080,37 @@ ru:
       failure: Невозможно обновить профиль.
       #original_hash: c29870c
       unavailable: Запрашиваемый язык недоступен.
+    mailer:
+      create_new_account:
+        #original_hash: a4ef6b6
+        header: Инструкции по подтверждению аккаунта
+        #original_hash: 6ee63db
+        welcome: 'Добро пожаловать, %{user_email}!'
+        #original_hash: da39d05
+        confirm: >-
+          Ваш аккаунт создан, теперь его надо активировать, прежде чем вы
+          сможете его использовать. Для этого, пожалуйста, пройдите по ссылке
+          ниже:
+        #original_hash: 776476a
+        confirmation_link: Подтвердить мой аккаунт.
+        #original_hash: d484f70
+        activate: Мосле активации вы сможете войти на сайт WCA.
+        #original_hash: 333999b
+        addendum: >-
+          Это письмо отправлено автоматически. Если вы не регистрировались на
+          сайте WCA (World Cube Association) и получили это письмо по ошибке,
+          можете проигнорировать или удалить его.
+        #original_hash: dbc2263
+        questions: >-
+          У вас остались вопросы? Мы будем рады ответить на них! Отправьте
+          письмо на %{contact_link}.
+      reconfirmation_mail:
+        #original_hash: f34029e
+        welcome: 'Здравствуйте, %{user_email}!'
+        #original_hash: 3095365
+        confirm: 'Вы можете подтвердить свой новый email-адрес, открыв эту ссылку:'
+        #original_hash: 4900afe
+        confirmation_link: Подтвердить email-адрес.
     claim_wca_id:
       #original_hash: f28bf87
       title: Затребовать WCA ID
@@ -2102,9 +2143,11 @@ ru:
       #original_hash: ac2ac3d
       title: Контактная форма WCA
       inquiries:
-        #original_hash: e1d277a
-        competition: 'Конкретное соревнование (пожалуйста, укажите, какое)'
-        #original_hash: f7d3f9f
+        #original_hash: 92ea7e8
+        competition: >-
+          Связаться с организаторами конкретного соревнования (пожалуйста,
+          укажите, какого)
+        #original_hash: f0bffb7
         competitions_in_general: 'Соревнования вообще (организация, правила и т.д.)'
         #original_hash: f6ffa78
         wca_id_or_profile: WCA ID или WCA профиль

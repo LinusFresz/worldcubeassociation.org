@@ -702,6 +702,8 @@ pt-BR:
         #original_hash: da39a3e
         inquiry: ''
         #original_hash: da39a3e
+        competition_id: ''
+        #original_hash: da39a3e
         message: ''
         #original_hash: da39a3e
         name: ''
@@ -820,6 +822,8 @@ pt-BR:
       team:
         #original_hash: da39a3e
         friendly_id: ''
+        #original_hash: da39a3e
+        hidden: ''
       vote:
         #original_hash: da39a3e
         comment: ''
@@ -867,6 +871,8 @@ pt-BR:
       contact_form:
         #original_hash: d31ab65
         inquiry: Qual destas melhor define seu pedido?
+        #original_hash: 1917f4f
+        competition_id: Competição
         #original_hash: 709a232
         name: Nome
         #original_hash: 3fa6f5f
@@ -917,6 +923,10 @@ pt-BR:
         recebeu uma mensagem de confirmação? Clique em
         https://www.worldcubeassociation.org/users/confirmation/new para
         solicitar uma nova.
+    mailer:
+      confirmation_instructions:
+        #original_hash: 0ea8196
+        subject: Por favor confirme seu novo email
   wca:
     errors:
       messages:
@@ -1059,6 +1069,75 @@ pt-BR:
       failure: Não foi possível atualizar seu perfil.
       #original_hash: c29870c
       unavailable: A linguagem solicitada não está disponível.
+    mailer:
+      create_new_account:
+        #original_hash: a4ef6b6
+        header: Instruções de confirmação
+        #original_hash: 6ee63db
+        welcome: 'Bem vindo %{user_email}!'
+        #original_hash: da39d05
+        confirm: >-
+          Sua conta foi criada e precisa ser ativada antes que você possa
+          usá-la. Por favor confirme sua conta no link abaixo:
+        #original_hash: 776476a
+        confirmation_link: Confirmar minha conta.
+        #original_hash: d484f70
+        activate: >-
+          Depois da ativação você poderá fazer o log in no site da World Cube
+          Association:
+        #original_hash: 333999b
+        addendum: >-
+          Esse email é gerado automaticamente. Se você não criou uma conta no
+          site da World Cube Association e recebeu esta mensagem por engano, por
+          favor ignore e apague.
+        #original_hash: dbc2263
+        questions: >-
+          Você tem mais alguma pergunta? Ficaremos felizes em responder! Envie
+          um email para %{contact_link}.
+      reconfirmation_mail:
+        #original_hash: f34029e
+        welcome: 'Olá %{user_email}!'
+        #original_hash: 3095365
+        confirm: 'Você pode confirmar seu novo email no link abaixo:'
+        #original_hash: 4900afe
+        confirmation_link: Confirmar endereço de email.
+      competition_submission_email:
+        #original_hash: ac4841b
+        header: '%{delegate_name} confirmou %{competition}'
+        #original_hash: 3db81b5
+        organizers: 'Caros organizadores do %{competition},'
+        #original_hash: c526fd6
+        confirmed: >-
+          O(a) Delegado(a) %{delegate_name} confirmou %{competition} e enviou
+          para o Conselho da WCA. Assim que a competição for anunciada, você
+          receberá outra notificação.
+        #original_hash: dfea09d
+        contact: >-
+          Se você tiver mais questões, por favor entre em contato com o(s)
+          Delegado(s) por email:
+      competition_announcement_email:
+        #original_hash: 1571dd8
+        header: 'O Conselho da WCA anunciou %{competition}'
+        #original_hash: 8e91977
+        announced: >-
+          O Conselho da WCA aprovou sua competição e a anunciou oficialmente
+          para o público.
+        #original_hash: 1c20919
+        link: 'Por favor use o link para ver o anúncio da competição:'
+      organizer_addition_email:
+        #original_hash: dc6f415
+        header: 'Você foi adicionado a %{competition} como um organizador'
+        #original_hash: c9d0561
+        intro: 'Olá %{name},'
+        #original_hash: 372b27f
+        information: >-
+          %{confirmer} adicionou você a %{competition} como um organizador. Você
+          pode editar esta competição aqui:
+      organizer_removal_email:
+        #original_hash: a31e8fb
+        header: 'Você foi removido dos organizadores de %{competition}'
+        #original_hash: 66cb109
+        information: '%{remover} removeu você dos organizadores de %{competition}.'
     claim_wca_id:
       #original_hash: f28bf87
       title: Conectar sua ID da WCA
@@ -2080,9 +2159,11 @@ pt-BR:
       #original_hash: ac2ac3d
       title: Formulário de Contato do Website da WCA
       inquiries:
-        #original_hash: e1d277a
-        competition: Uma competição específica (por favor selecione)
-        #original_hash: f7d3f9f
+        #original_hash: 92ea7e8
+        competition: >-
+          Contatar os Organizadores de uma competição específica (por favor
+          selecione)
+        #original_hash: f0bffb7
         competitions_in_general: 'Competições em geral (Organização, Regras, etc.)'
         #original_hash: f6ffa78
         wca_id_or_profile: ID da WCA ou Perfil da WCA

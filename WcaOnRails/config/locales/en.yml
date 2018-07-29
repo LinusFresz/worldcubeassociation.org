@@ -405,6 +405,7 @@ en:
         registration_requirements: "Please indicate here any specificities about the registration process, as needed per <a href=\"https://www.worldcubeassociation.org/regulations/guidelines.html#2c1+\" target=\"_blank\">Guideline 2c1+</a>. After the competition is announced, this field will <b>not</b> be editable anymore, and Board's approval will be needed to modify it.<br/>For example indicate here if competitors need to have a clean payment history with a specific entity, if there is some refund policy, or if they will have to answer a confirmation email in case the maximum number of registrations is reached.<br/>Please fill this out <b>in English</b> and whatever other languages your competitors speak; it will be displayed on the competition's registration page if you are using the WCA website registrations."
       website_contact:
         inquiry: ""
+        competition_id: ""
         message: ""
         name: ""
         your_email: ""
@@ -488,6 +489,7 @@ en:
     attributes:
       contact_form:
         inquiry: "Which of the following best describes your inquiry?"
+        competition_id: "Competition"
         name: "Name"
         your_email: "Your email"
       website_contact:
@@ -540,7 +542,7 @@ en:
     doorkeeper:
       applications:
         help:
-          native_redirect_uri: 'Use %{native_redirect_uri} if you want to add localhost URIs'
+          https_info: 'HTTPS is required unless the host is "localhost"'
           scopes_html: 'Separate scopes with spaces. Leave blank to use the default scope(s). See <a href="https://github.com/thewca/worldcubeassociation.org/blob/master/WcaOnRails/config/initializers/doorkeeper.rb#L4-L10" target="_blank">here</a> for a list of supported scopes.'
       #context: and asking the user "The application will be able to"
       scopes:
@@ -625,6 +627,25 @@ en:
         welcome: "Hello %{user_email}!"
         confirm: "You can confirm your new account email address through the link below:"
         confirmation_link: "Confirm mail address."
+      #context: notification to organizer that delegate submitted competition to the WCA Board
+      competition_submission_email:
+        header: "%{delegate_name} confirmed %{competition}"
+        organizers: "Dear organizers of %{competition},"
+        confirmed: "Your competition Delegate %{delegate_name} confirmed %{competition} and sent the submission to the WCA Board. As soon as the WCA Board announces this competition to the public, you will receive another notification."
+        contact: "If you have more questions, please get in contact with the competition Delegate(s) via email: "
+      #context: notification to organizers after the WCA Board announced their competition
+      competition_announcement_email:
+        header: "The WCA Board announced %{competition}"
+        announced: "The WCA Board approved your competition and officially announced it to the public."
+        link: "Please follow the link to get to the competition announcement: "
+      #context: notification to users after they were added to a competition as organizers
+      organizer_addition_email:
+        header: "You were added to %{competition} as an organizer"
+        intro: "Hello %{name},"
+        information: "%{confirmer} added you to %{competition} as an organizer. You can edit this competition here:"
+      organizer_removal_email:
+        header: "You were removed from %{competition} as an organizer"
+        information: "%{remover} removed you from %{competition} as an organizer."
     #context: related to claiming a WCA ID
     claim_wca_id:
       title: "Claim WCA ID"
@@ -1162,8 +1183,8 @@ en:
     website:
       title: "WCA Website Contact Form"
       inquiries:
-        competition: "A specific competition (please select)"
-        competitions_in_general: "Competitions in general (Organizing, Competition rules, etc.)"
+        competition: "Contact the Organizers of a Specific Competition (please select below)"
+        competitions_in_general: "Competitions in General (organizing, competition rules, etc.)"
         wca_id_or_profile: "WCA ID or WCA Profile"
         media: "Media"
         software: "Software"
@@ -1326,12 +1347,13 @@ en:
     bylaws: "Bylaws"
     motions: "Motions"
     minutes: "Minutes"
-    policies: "Policies"
-    dues: "WCA Dues System"
-    logo: "WCA Logo Usage"
-    proximity_policy: "WCA Competition Proximity Policy"
-    competition_name_policy: "WCA Competition Name Policy"
-    competition_announcement_policy: "WCA Competition Announcement Policy"
+    policies: "WCA Policies"
+    dues: "Dues System"
+    logo: "Logo Usage"
+    proximity_policy: "Competition Proximity Policy"
+    competition_name_policy: "Competition Name Policy"
+    competition_announcement_policy: "Competition Announcement Policy"
+    sponsor: "Sponsor Acknowledgments"
   #context: Delegates page
   delegates_page:
     title: "WCA Delegates"
